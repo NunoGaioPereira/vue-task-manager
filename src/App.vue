@@ -6,18 +6,22 @@
       <AddTask @add-task="addTask" />
     </div>
     <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
+    <router-view></router-view>
   </div>
+  <Footer />
 </template>
 
 <script>
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
   components: {
     Header,
+    Footer,
     Tasks,
     AddTask,
   },
